@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="id"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260709-05-e5cead5"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firma Hukum</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0a1628',
+            'navy-light': '#142240',
+            gold: '#c9a84c',
+            'gold-light': '#e8d48b'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Merriweather', serif; }
+    .nav-logo-wrapper { display: flex; align-items: center; padding: 0 4px; }
+    .nav-logo { height: 55px !important; width: auto; image-rendering: crisp-edges; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3)); }
+    .nav-bar { background: #1a1a1a; box-shadow: 0 1px 8px rgba(0,0,0,0.2); height: 65px; display: flex; align-items: center; }
+    .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-content.open { max-height: 500px; }
+    .hero-section { min-height: calc(100 * min(var(--vh, 1vh), 1vh)); }
+    .service-hero { min-height: 50vh; position: relative; display: flex; align-items: center; justify-content: center; }
+    .view-transition { animation: fadeSlideIn 0.5s ease forwards; }
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .team-card-interactive {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .team-card-interactive:hover {
+      transform: scale(1.03);
+      box-shadow: 0 20px 40px rgba(10,22,40,0.15);
+      border-color: #c9a84c;
+    }
+    .profile-stat-ring {
+      width: 90px; height: 90px; border-radius: 50%;
+      border: 4px solid #c9a84c;
+      display: flex; align-items: center; justify-content: center; flex-direction: column;
+    }
+    .timeline-item { position: relative; padding-left: 2rem; border-left: 2px solid #c9a84c; margin-bottom: 1.5rem; }
+    .timeline-item::before { content: ''; position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: #c9a84c; }
+  </style>
+  <script src="/_sdk/0179d719c431a79e.data_sdk.js" type="text/javascript" integrity="sha512-OsRvJkI5GkC3MJQcgotQYotpzrMSX415GiKKgvYdxQEEkzD/fdchShO2FMSy0PJr/tiINMXOk5Vl2zAgg6bUiA=="></script>
+  <script src="/_sdk/9432170dbd2ae0df.resizing_sdk.js" type="text/javascript" integrity="sha512-FeT+58sb1f9ejWPWFjCbJvTT+SDwGV+ngrHUnlO7TWEOoqwOLj6p256kO3vOL7DIWl1cIgrobiof8v2bOigwPg=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full bg-white text-gray-800" style="background: rgb(255, 255, 255);">
+  <nav id="navbar" class="nav-bar fixed top-0 left-0 right-0 z-50">
+   <div class="w-full h-full px-6 flex items-center justify-between">
+    <a href="#home" class="cursor-pointer nav-logo-wrapper"><img data-template-id="nav-logo" class="canva-image nav-logo" loading="lazy" src="logo.png" alt="Your Partner's Legal Counsel premium law firm logo with gold shield"></a>
+    <div class="hidden md:flex items-center gap-6">
+     <a href="#home" class="text-white/85 hover:text-gold transition text-xs font-medium uppercase tracking-wide">Beranda</a> <a href="#home" data-scroll="about" class="text-white/85 hover:text-gold transition text-xs font-medium uppercase tracking-wide">Tentang</a> <a href="#home" data-scroll="team" class="text-white/85 hover:text-gold transition text-xs font-medium uppercase tracking-wide">Tim</a> <a href="#home" data-scroll="services" class="text-white/85 hover:text-gold transition text-xs font-medium uppercase tracking-wide">Layanan</a> <a href="#home" data-scroll="articles" class="text-white/85 hover:text-gold transition text-xs font-medium uppercase tracking-wide">Artikel</a> <a href="#home" data-scroll="contact" class="text-white/85 hover:text-gold transition text-xs font-medium uppercase tracking-wide">Kontak</a>
+    </div><button id="mobile-menu-btn" class="md:hidden text-white flex-shrink-0" type="button"><i data-lucide="menu" class="w-5 h-5"></i></button>
+   </div>
+   <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur px-6 py-3 flex flex-col gap-2">
+    <a href="#home" class="py-2 text-white/85 hover:text-gold text-xs font-medium uppercase tracking-wide">Beranda</a> <a href="#home" data-scroll="about" class="py-2 text-white/85 hover:text-gold text-xs font-medium uppercase tracking-wide">Tentang</a> <a href="#home" data-scroll="team" class="py-2 text-white/85 hover:text-gold text-xs font-medium uppercase tracking-wide">Tim</a> <a href="#home" data-scroll="services" class="py-2 text-white/85 hover:text-gold text-xs font-medium uppercase tracking-wide">Layanan</a> <a href="#home" data-scroll="articles" class="py-2 text-white/85 hover:text-gold text-xs font-medium uppercase tracking-wide">Artikel</a> <a href="#home" data-scroll="contact" class="py-2 text-white/85 hover:text-gold text-xs font-medium uppercase tracking-wide">Kontak</a>
+   </div>
+  </nav>
+  <div id="app">
+   <div id="view-home">
+    <!-- Hidden service hero images --> <img id="service-hero-criminal" data-template-id="service-hero-criminal" class="canva-image hidden" loading="lazy" src="Detail Hukum Perdata dan pidana.jpg" alt="Grand courthouse hallway with Lady Justice scales silhouette"> <img id="service-hero-business" data-template-id="service-hero-business" class="canva-image hidden" loading="lazy" src="https://images.pexels.com/photos/5673490/pexels-photo-5673490.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Business law professionals in conference meeting"> <img id="service-hero-family" data-template-id="service-hero-family" class="canva-image hidden" loading="lazy" src="https://images.pexels.com/photos/7876154/pexels-photo-7876154.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Lawyer consulting clients in a modern office setting"> <img id="service-hero-land" data-template-id="service-hero-land" class="canva-image hidden" loading="lazy" src="https://images.pexels.com/photos/7937682/pexels-photo-7937682.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Real estate legal documents and house key"> <img id="service-hero-dispute" data-template-id="service-hero-dispute" class="canva-image hidden" loading="lazy" src="https://images.pexels.com/photos/9488837/pexels-photo-9488837.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Professional handshake over business documents"> <img id="service-hero-mediation" data-template-id="service-hero-mediation" class="canva-image hidden" loading="lazy" src="https://images.pexels.com/photos/7876290/pexels-photo-7876290.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Lawyer consulting couple in mediation meeting"> <img id="service-hero-arbitration" data-template-id="service-hero-arbitration" class="canva-image hidden" loading="lazy" src="https://images.pexels.com/photos/14766052/pexels-photo-14766052.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Formal courtroom with wooden judge bench"> <img id="service-hero-legal-opinion" data-template-id="service-hero-legal-opinion" class="canva-image hidden" loading="lazy" src="https://images.pexels.com/photos/7875842/pexels-photo-7875842.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Legal professional reviewing documents at desk"> <img id="service-hero-contract" data-template-id="service-hero-contract" class="canva-image hidden" loading="lazy" src="https://images.pexels.com/photos/261621/pexels-photo-261621.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Hand signing formal contract with fountain pen"> <img id="service-hero-litigation" data-template-id="service-hero-litigation" class="canva-image hidden" loading="lazy" src="https://images.pexels.com/photos/34817109/pexels-photo-34817109.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Female lawyers in courtroom with legal documents"> <img id="service-hero-consultation" data-template-id="service-hero-consultation" class="canva-image hidden" loading="lazy" src="https://images.pexels.com/photos/7876154/pexels-photo-7876154.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Professional legal consultation in modern office"> <!-- Hero -->
+    <section class="hero-section relative flex items-center justify-center mt-16">
+     <img data-template-id="hero-bg" class="canva-image absolute inset-0 w-full h-full object-cover" loading="lazy" src="lobi.png" alt="Figurines of people standing with scales of justice and judge gavel on wooden desk">
+     <div class="absolute inset-0 bg-navy/75"></div>
+     <div class="relative z-10 text-center px-6 max-w-4xl">
+      <h1 data-template-id="hero-title" class="canva-text text-white mb-6 leading-tight" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 44px;">Solusi Hukum yang Profesional, Terpercaya, dan Berintegritas</h1>
+      <p data-template-id="hero-subtitle" class="canva-text text-white/80 text-lg mb-10 max-w-2xl mx-auto" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 17px;">Keadilan adalah hak setiap orang. Kami hadir untuk memperjuangkannya dengan dedikasi, profesionalisme, dan tanggung jawab.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+       <a href="#home" data-scroll="contact" data-template-id="hero-cta-1" class="canva-button px-8 py-4 bg-gold text-navy font-semibold rounded hover:bg-gold-light transition" style="background: rgb(201, 168, 76); color: rgb(10, 22, 40); font-weight: 600; font-style: normal; font-size: 16px;">Konsultasi Sekarang</a> <a href="#home" data-scroll="contact" data-template-id="hero-cta-2" class="canva-button px-8 py-4 border-2 border-white text-white font-semibold rounded hover:bg-white hover:text-navy transition" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Hubungi Kami</a>
+      </div>
+     </div>
+    </section><!-- Services Summary -->
+    <section class="py-16 md:py-20 bg-gray-50">
+     <div class="max-w-7xl mx-auto px-6">
+      <h2 data-template-id="services-summary-title" class="canva-text text-center text-navy mb-4" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 24px;">Layanan Hukum Kami</h2>
+      <p data-template-id="services-summary-desc" class="canva-text text-center text-gray-600 mb-12 max-w-2xl mx-auto" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Kami menyediakan layanan hukum komprehensif yang mencakup berbagai bidang untuk kebutuhan individu maupun korporasi.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+       <div data-template-id="svc-card-1" class="canva-card bg-white rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition group cursor-pointer" onclick="location.hash='#service/hukum-pidana-perdata'" style="background: rgb(255, 255, 255);">
+        <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gold/20 transition"><i data-lucide="shield" class="w-7 h-7 text-navy"></i>
+        </div>
+        <h3 data-template-id="svc-card-1-title" class="canva-text text-navy font-bold mb-2" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Hukum Pidana &amp; Perdata</h3>
+        <p data-template-id="svc-card-1-desc" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Pendampingan litigasi dan non-litigasi untuk perkara pidana dan perdata dengan strategi terbaik.</p>
+       </div>
+       <div data-template-id="svc-card-2" class="canva-card bg-white rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition group cursor-pointer" onclick="location.hash='#service/hukum-bisnis-korporasi'" style="background: rgb(255, 255, 255);">
+        <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gold/20 transition"><i data-lucide="briefcase" class="w-7 h-7 text-navy"></i>
+        </div>
+        <h3 data-template-id="svc-card-2-title" class="canva-text text-navy font-bold mb-2" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Hukum Bisnis &amp; Korporasi</h3>
+        <p data-template-id="svc-card-2-desc" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Konsultasi hukum bisnis, pembuatan kontrak, dan pendampingan transaksi korporasi.</p>
+       </div>
+       <div data-template-id="svc-card-3" class="canva-card bg-white rounded-xl p-6 md:p-8 shadow-md hover:shadow-xl transition group cursor-pointer" onclick="location.hash='#service/hukum-keluarga-waris'" style="background: rgb(255, 255, 255);">
+        <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gold/20 transition"><i data-lucide="users" class="w-7 h-7 text-navy"></i>
+        </div>
+        <h3 data-template-id="svc-card-3-title" class="canva-text text-navy font-bold mb-2" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Hukum Keluarga &amp; Waris</h3>
+        <p data-template-id="svc-card-3-desc" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Penanganan sengketa keluarga, perceraian, hak asuh anak, dan pembagian waris.</p>
+       </div>
+      </div>
+     </div>
+    </section><!-- Why Choose Us -->
+    <section class="py-16 md:py-20 bg-white">
+     <div class="max-w-7xl mx-auto px-6">
+      <h2 data-template-id="why-title" class="canva-text text-center text-navy mb-12" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 24px;">Mengapa Memilih Kami</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+       <div>
+        <div class="text-3xl md:text-4xl font-bold text-gold mb-2">
+         25+
+        </div>
+        <p data-template-id="stat-1" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Tahun Pengalaman</p>
+       </div>
+       <div>
+        <div class="text-3xl md:text-4xl font-bold text-gold mb-2">
+         500+
+        </div>
+        <p data-template-id="stat-2" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Kasus Ditangani</p>
+       </div>
+       <div>
+        <div class="text-3xl md:text-4xl font-bold text-gold mb-2">
+         98%
+        </div>
+        <p data-template-id="stat-3" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Tingkat Keberhasilan</p>
+       </div>
+       <div>
+        <div class="text-3xl md:text-4xl font-bold text-gold mb-2">
+         15
+        </div>
+        <p data-template-id="stat-4" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Advokat Profesional</p>
+       </div>
+      </div>
+     </div>
+    </section><!-- About -->
+    <section id="about" class="py-16 md:py-20 bg-gray-50">
+     <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+       <div>
+        <h2 data-template-id="about-title" class="canva-text text-navy mb-6" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 24px;">Tentang Firma Kami</h2>
+        <p data-template-id="about-desc" class="canva-text text-gray-600 mb-8 leading-relaxed text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Your Partner's didirikan pada tahun 1999 dengan komitmen memberikan layanan hukum berkualitas tinggi. Nama Your Partner's mencerminkan komitmen kami untuk menjadi mitra hukum yang dapat diandalkan, baik saat ini maupun di masa depan. Logo jabat tangan melambangkan kemitraan dan kepercayaan, sedangkan padi dan kapas melambangkan keadilan dan kesejahteraan sesuai nilai Sila ke-5 pancasila. Didampingi tim advokat berpengalaman, kami telah menangani ribuan kasus di berbagai bidang sebagai firma hukum terpercaya di Indonesia.</p>
+        <div class="space-y-6">
+         <div class="bg-white rounded-lg p-5 md:p-6 border-l-4 border-gold shadow-sm">
+          <h4 data-template-id="about-visi-label" class="canva-text text-navy font-bold mb-2" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 16px;">Visi</h4>
+          <p data-template-id="about-visi" class="canva-text text-gray-600 text-sm leading-relaxed" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Menjadi firma hukum terpercaya yang memberikan layanan hukum profesional, berintegritas, serta menjadi mitra terbaik bagi masyarakat dan dunia usaha dalam mewujudkan keadilan</p>
+         </div>
+         <div class="bg-white rounded-lg p-5 md:p-6 border-l-4 border-gold shadow-sm">
+          <h4 data-template-id="about-misi-label" class="canva-text text-navy font-bold mb-2" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 16px;">Misi</h4>
+          <p data-template-id="about-misi" class="canva-text text-gray-600 text-sm leading-relaxed" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Memberikan layanan hukum profesional dengan integritas dan dedikasi tinggi.</p>
+         </div>
+        </div>
+       </div><img data-template-id="about-img" class="canva-image rounded-xl shadow-lg w-full h-auto object-cover" loading="lazy" src="Tentang kami.jpg" alt="A spacious and modern open-plan office with natural lighting">
+      </div>
+     </div>
+    </section><!-- Team -->
+    <section id="team" class="py-16 md:py-20 bg-white">
+     <div class="max-w-7xl mx-auto px-6">
+      <h2 data-template-id="team-title" class="canva-text text-center text-navy mb-12" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 24px;">Tim Advokat Kami</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+       <div data-template-id="team-card-1" class="canva-card bg-gray-50 rounded-xl overflow-hidden shadow-md team-card-interactive" onclick="location.hash='#profile/1'" style="background: rgb(249, 250, 251);">
+        <img data-template-id="team-img-1" class="canva-image w-full h-56 sm:h-64 object-cover object-center" loading="lazy" src="Anggota1.png" alt="Concentrated Asian male lawyer wearing formal suit working at desk">
+        <div class="p-5 md:p-6">
+         <h3 data-template-id="team-name-1" class="canva-text text-navy font-bold text-sm md:text-base" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Dr. Yazied Ikhwan bin Setu, S.H., M.H.</h3>
+         <p data-template-id="team-role-1" class="canva-text text-gold text-sm mb-2" style="color: rgb(201, 168, 76); font-weight: 700; font-style: normal; font-size: 16px;">1253060123</p>
+         <p data-template-id="team-spec-1" class="canva-text text-gray-600 text-xs md:text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">Spesialisasi: Hukum Pidana &amp; Bisnis • Universitas Indonesia • 20 tahun pengalaman</p>
+        </div>
+       </div>
+       <div data-template-id="team-card-2" class="canva-card bg-gray-50 rounded-xl overflow-hidden shadow-md team-card-interactive" onclick="location.hash='#profile/2'" style="background: rgb(249, 250, 251);">
+        <img data-template-id="team-img-2" class="canva-image w-full h-56 sm:h-64 object-cover object-center" loading="lazy" src="Anggota2.png" alt="Professional female lawyer in hijab and formal business suit with confident expression">
+        <div class="p-5 md:p-6">
+         <h3 data-template-id="team-name-2" class="canva-text text-navy font-bold text-sm md:text-base" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Salsa Bila Agustin Putri, S.H., LL.M.</h3>
+         <p data-template-id="team-role-2" class="canva-text text-gold text-sm mb-2" style="color: rgb(201, 168, 76); font-weight: 700; font-style: normal; font-size: 16px;">1253060056</p>
+         <p data-template-id="team-spec-2" class="canva-text text-gray-600 text-xs md:text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">Spesialisasi: Hukum Keluarga &amp; Perdata • Universitas Gadjah Mada • 15 tahun pengalaman</p>
+        </div>
+       </div>
+       <div data-template-id="team-card-3" class="canva-card bg-gray-50 rounded-xl overflow-hidden shadow-md team-card-interactive" onclick="location.hash='#profile/3'" style="background: rgb(249, 250, 251);">
+        <img data-template-id="team-img-3" class="canva-image w-full h-56 sm:h-64 object-cover object-center" loading="lazy" src="Anggota3.png" alt="Professional male team member with glasses in front of bookshelves">
+        <div class="p-5 md:p-6">
+         <h3 data-template-id="team-name-3" class="canva-text text-navy font-bold text-sm md:text-base" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Mochammad Farizki, S.H., M.Kn.</h3>
+         <p data-template-id="team-role-3" class="canva-text text-gold text-sm mb-2" style="color: rgb(201, 168, 76); font-weight: 700; font-style: normal; font-size: 16px;">1253060058</p>
+         <p data-template-id="team-spec-3" class="canva-text text-gray-600 text-xs md:text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">Spesialisasi: Hukum Pertanahan &amp; Waris • Universitas Airlangga • 12 tahun pengalaman</p>
+        </div>
+       </div>
+       <div data-template-id="team-card-4" class="canva-card bg-gray-50 rounded-xl overflow-hidden shadow-md team-card-interactive" onclick="location.hash='#profile/4'" style="background: rgb(249, 250, 251);">
+        <img data-template-id="team-img-4" class="canva-image w-full h-56 sm:h-64 object-cover object-center" loading="lazy" src="Anggota4.png" alt="Professional female lawyer in hijab and formal business suit at office desk with law books background">
+        <div class="p-5 md:p-6">
+         <h3 data-template-id="team-name-4" class="canva-text text-navy font-bold text-sm md:text-base" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Niki Putri, S.H., LL.M.</h3>
+         <p data-template-id="team-role-4" class="canva-text text-gold text-sm mb-2" style="color: rgb(201, 168, 76); font-weight: 700; font-style: normal; font-size: 16px;">1253060023</p>
+         <p data-template-id="team-spec-4" class="canva-text text-gray-600 text-xs md:text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">Spesialisasi: Hukum Korporasi &amp; M&amp;A • Universitas Indonesia • 18 tahun pengalaman</p>
+        </div>
+       </div>
+       <div data-template-id="team-card-5" class="canva-card bg-gray-50 rounded-xl overflow-hidden shadow-md team-card-interactive" onclick="location.hash='#profile/5'" style="background: rgb(249, 250, 251);">
+        <img data-template-id="team-img-5" class="canva-image w-full h-56 sm:h-64 object-cover object-center" loading="lazy" src="Anggota5.png" alt="Professional male lawyer in formal black suit and blue tie at office desk with law books in background">
+        <div class="p-5 md:p-6">
+         <h3 data-template-id="team-name-5" class="canva-text text-navy font-bold text-sm md:text-base" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Salman Nawawi, S.H., M.H</h3>
+         <p data-template-id="team-role-5" class="canva-text text-gold text-sm mb-2" style="color: rgb(201, 168, 76); font-weight: 700; font-style: normal; font-size: 16px;">1253060051</p>
+         <p data-template-id="team-spec-5" class="canva-text text-gray-600 text-xs md:text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">Spesialisasi: Hukum Kontrak &amp; Komersial • Universitas Brawijaya • 14 tahun pengalaman</p>
+        </div>
+       </div>
+       <div data-template-id="team-card-6" class="canva-card bg-gray-50 rounded-xl overflow-hidden shadow-md team-card-interactive" onclick="location.hash='#profile/6'" style="background: rgb(249, 250, 251);">
+        <img data-template-id="team-img-6" class="canva-image w-full h-56 sm:h-64 object-cover object-center" loading="lazy" src="Anggota6.jpeg" alt="Professional female lawyer in hijab and formal business suit confident">
+        <div class="p-5 md:p-6">
+         <h3 data-template-id="team-name-6" class="canva-text text-navy font-bold text-sm md:text-base" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Luki Rahmat Hidayat, S.H., LL.M.</h3>
+         <p data-template-id="team-role-6" class="canva-text text-gold text-sm mb-2" style="color: rgb(201, 168, 76); font-weight: 700; font-style: normal; font-size: 16px;">1253060047</p>
+         <p data-template-id="team-spec-6" class="canva-text text-gray-600 text-xs md:text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">Hukum Investasi &amp; IPO • Universitas Tarumanagara • 7 tahun pengalaman</p>
+        </div>
+       </div>
+       <div data-template-id="team-card-7" class="canva-card bg-gray-50 rounded-xl overflow-hidden shadow-md team-card-interactive" onclick="location.hash='#profile/7'" style="background: rgb(249, 250, 251);">
+        <img data-template-id="team-img-7" class="canva-image w-full h-56 sm:h-64 object-cover object-center" loading="lazy" src="Anggota7.png" alt="Professional young Indonesian male lawyer in formal black suit and tie smiling confidently in office with law books background">
+        <div class="p-5 md:p-6">
+         <h3 data-template-id="team-name-7" class="canva-text text-navy font-bold text-sm md:text-base" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Sadam Malik Akbar, S.H., M.H</h3>
+         <p data-template-id="team-role-7" class="canva-text text-gold text-sm mb-2" style="color: rgb(201, 168, 76); font-weight: 700; font-style: normal; font-size: 16px;">1253060049</p>
+         <p data-template-id="team-spec-7" class="canva-text text-gray-600 text-xs md:text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">Spesialisasi: Hukum Pidana &amp; Forensik • Universitas Hasanuddin • 6 tahun pengalaman</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Services Full -->
+    <section id="services" class="py-16 md:py-20 bg-navy">
+     <div class="max-w-7xl mx-auto px-6">
+      <h2 data-template-id="services-title" class="canva-text text-center text-white mb-4" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Layanan Lengkap Kami</h2>
+      <p data-template-id="services-desc" class="canva-text text-center text-white/70 mb-12 max-w-2xl mx-auto" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Kami menawarkan berbagai layanan hukum profesional untuk memenuhi kebutuhan Anda.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="services-grid"></div>
+     </div>
+    </section><!-- Articles -->
+    <section id="articles" class="py-16 md:py-20 bg-gray-50">
+     <div class="max-w-7xl mx-auto px-6">
+      <h2 data-template-id="articles-title" class="canva-text text-center text-navy mb-12" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 24px;">Artikel Hukum Terbaru</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+       <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer" onclick="location.hash='#article/0'">
+        <img data-template-id="article-img-1" class="canva-image w-full h-48 object-cover" loading="lazy" src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Shiny wooden ceremonial mallet with golden detail placed on judge table">
+        <div class="p-5 md:p-6">
+         <h3 data-template-id="article-title-1" class="canva-text text-navy font-bold mb-2" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Memahami Hak Anda dalam Proses Pidana</h3>
+         <p data-template-id="article-desc-1" class="canva-text text-gray-600 text-sm mb-4" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Setiap warga negara memiliki hak-hak fundamental yang dilindungi oleh hukum dalam proses peradilan pidana.</p><span data-template-id="article-btn-1" class="canva-link text-gold font-semibold text-sm hover:underline cursor-pointer" style="color: rgb(201, 168, 76); font-weight: 600; font-style: normal; font-size: 16px;">Baca Selengkapnya →</span>
+        </div>
+       </div>
+       <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer" onclick="location.hash='#article/1'">
+        <img data-template-id="article-img-2" class="canva-image w-full h-48 object-cover" loading="lazy" src="https://images.pexels.com/photos/7876050/pexels-photo-7876050.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Legal professionals reviewing documents in a law office">
+        <div class="p-5 md:p-6">
+         <h3 data-template-id="article-title-2" class="canva-text text-navy font-bold mb-2" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Panduan Pembuatan Kontrak Bisnis</h3>
+         <p data-template-id="article-desc-2" class="canva-text text-gray-600 text-sm mb-4" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Kontrak bisnis yang baik adalah fondasi dari hubungan bisnis yang sehat dan berkelanjutan.</p><span data-template-id="article-btn-2" class="canva-link text-gold font-semibold text-sm hover:underline cursor-pointer" style="color: rgb(201, 168, 76); font-weight: 600; font-style: normal; font-size: 16px;">Baca Selengkapnya →</span>
+        </div>
+       </div>
+       <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer" onclick="location.hash='#article/2'">
+        <img data-template-id="article-img-3" class="canva-image w-full h-48 object-cover" loading="lazy" src="https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="High angle lawyers desk with decorative judgement scales and gavel in modern law firm">
+        <div class="p-5 md:p-6">
+         <h3 data-template-id="article-title-3" class="canva-text text-navy font-bold mb-2" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 19px;">Mediasi: Alternatif Penyelesaian Sengketa</h3>
+         <p data-template-id="article-desc-3" class="canva-text text-gray-600 text-sm mb-4" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Mediasi menawarkan solusi yang lebih efisien dan hemat biaya dibandingkan jalur litigasi konvensional.</p><span data-template-id="article-btn-3" class="canva-link text-gold font-semibold text-sm hover:underline cursor-pointer" style="color: rgb(201, 168, 76); font-weight: 600; font-style: normal; font-size: 16px;">Baca Selengkapnya →</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Testimonials -->
+    <section class="py-16 md:py-20 bg-white">
+     <div class="max-w-7xl mx-auto px-6">
+      <h2 data-template-id="testi-title" class="canva-text text-center text-navy mb-12" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 24px;">Testimoni Klien</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+       <div data-template-id="testi-card-1" class="canva-card bg-gray-50 rounded-xl p-6 md:p-8 border-t-4 border-gold" style="background: rgb(249, 250, 251);">
+        <p data-template-id="testi-text-1" class="canva-text text-gray-600 italic mb-4" style="color: rgb(75, 85, 99); font-weight: 400; font-style: italic; font-size: 16px;">"Tim LEXUS &amp; Partners sangat profesional dan responsif. Mereka berhasil menangani kasus bisnis kami dengan hasil yang memuaskan."</p>
+        <p data-template-id="testi-name-1" class="canva-text text-navy font-bold" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 16px;">— Hendra Wijaya, CEO PT Maju Bersama</p>
+       </div>
+       <div data-template-id="testi-card-2" class="canva-card bg-gray-50 rounded-xl p-6 md:p-8 border-t-4 border-gold" style="background: rgb(249, 250, 251);">
+        <p data-template-id="testi-text-2" class="canva-text text-gray-600 italic mb-4" style="color: rgb(75, 85, 99); font-weight: 400; font-style: italic; font-size: 16px;">"Penanganan kasus waris keluarga kami dilakukan dengan sangat hati-hati dan penuh empati. Sangat direkomendasikan."</p>
+        <p data-template-id="testi-name-2" class="canva-text text-navy font-bold" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 16px;">— Ibu Ratna Sari, Klien Individu</p>
+       </div>
+       <div data-template-id="testi-card-3" class="canva-card bg-gray-50 rounded-xl p-6 md:p-8 border-t-4 border-gold" style="background: rgb(249, 250, 251);">
+        <p data-template-id="testi-text-3" class="canva-text text-gray-600 italic mb-4" style="color: rgb(75, 85, 99); font-weight: 400; font-style: italic; font-size: 16px;">"Konsultasi hukum yang diberikan sangat komprehensif. Kami merasa aman dan terlindungi secara hukum."</p>
+        <p data-template-id="testi-name-3" class="canva-text text-navy font-bold" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 16px;">— PT Global Investama</p>
+       </div>
+      </div>
+     </div>
+    </section><!-- FAQ -->
+    <section class="py-16 md:py-20 bg-gray-50">
+     <div class="max-w-3xl mx-auto px-6">
+      <h2 data-template-id="faq-title" class="canva-text text-center text-navy mb-12" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 24px;">Pertanyaan yang Sering Diajukan</h2>
+      <div class="space-y-4" id="faq-container">
+       <div class="bg-white rounded-lg shadow-sm">
+        <button class="faq-btn w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-navy" type="button"><span data-template-id="faq-q-1" class="canva-text" style="color: rgb(10, 22, 40); font-weight: 600; font-style: normal; font-size: 16px;">Bagaimana cara memulai konsultasi hukum?</span><i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i></button>
+        <div class="faq-content px-6 pb-4">
+         <p data-template-id="faq-a-1" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Anda dapat menghubungi kami melalui formulir kontak, WhatsApp, atau telepon. Tim kami akan menjadwalkan sesi konsultasi awal untuk memahami kebutuhan hukum Anda.</p>
+        </div>
+       </div>
+       <div class="bg-white rounded-lg shadow-sm">
+        <button class="faq-btn w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-navy" type="button"><span data-template-id="faq-q-2" class="canva-text" style="color: rgb(10, 22, 40); font-weight: 600; font-style: normal; font-size: 16px;">Berapa biaya konsultasi awal?</span><i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i></button>
+        <div class="faq-content px-6 pb-4">
+         <p data-template-id="faq-a-2" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Konsultasi awal kami bersifat gratis selama 30 menit. Biaya selanjutnya akan disesuaikan dengan kompleksitas kasus dan disepakati bersama.</p>
+        </div>
+       </div>
+       <div class="bg-white rounded-lg shadow-sm">
+        <button class="faq-btn w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-navy" type="button"><span data-template-id="faq-q-3" class="canva-text" style="color: rgb(10, 22, 40); font-weight: 600; font-style: normal; font-size: 16px;">Apakah firma ini menangani kasus di luar Jakarta?</span><i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i></button>
+        <div class="faq-content px-6 pb-4">
+         <p data-template-id="faq-a-3" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Ya, kami memiliki jaringan advokat di berbagai kota besar di Indonesia dan siap menangani kasus di seluruh wilayah hukum Indonesia.</p>
+        </div>
+       </div>
+       <div class="bg-white rounded-lg shadow-sm">
+        <button class="faq-btn w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-navy" type="button"><span data-template-id="faq-q-4" class="canva-text" style="color: rgb(10, 22, 40); font-weight: 600; font-style: normal; font-size: 16px;">Berapa lama proses penanganan kasus?</span><i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i></button>
+        <div class="faq-content px-6 pb-4">
+         <p data-template-id="faq-a-4" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Durasi penanganan bervariasi tergantung jenis dan kompleksitas kasus. Kami akan memberikan estimasi waktu setelah analisis awal kasus Anda.</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- CTA -->
+    <section class="relative py-20 md:py-24">
+     <img data-template-id="cta-bg" class="canva-image absolute inset-0 w-full h-full object-cover" loading="lazy" src="Bantuan hukum.jpg" alt="A diverse team of business professionals collaborating in a modern meeting room">
+     <div class="absolute inset-0 bg-navy/80"></div>
+     <div class="relative z-10 text-center px-6">
+      <h2 data-template-id="cta-title" class="canva-text text-white mb-4" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Siap Mendapatkan Bantuan Hukum?</h2>
+      <p data-template-id="cta-desc" class="canva-text text-white/80 mb-8 max-w-xl mx-auto" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Jangan biarkan masalah hukum berlarut-larut. Hubungi kami sekarang untuk konsultasi gratis.</p><a href="#home" data-scroll="contact" data-template-id="cta-btn" class="canva-button inline-block px-10 py-4 bg-gold text-navy font-bold rounded hover:bg-gold-light transition" style="background: rgb(201, 168, 76); color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 16px;">Jadwalkan Konsultasi Gratis</a>
+     </div>
+    </section><!-- Contact -->
+    <section id="contact" class="py-16 md:py-20 bg-white">
+     <div class="max-w-7xl mx-auto px-6">
+      <h2 data-template-id="contact-title" class="canva-text text-center text-navy mb-12" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 24px;">Hubungi Kami</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+       <form id="contact-form" class="space-y-4">
+        <div>
+         <label data-template-id="form-name-label" for="name" class="canva-text block text-sm font-medium text-navy mb-1" style="color: rgb(10, 22, 40); font-weight: 400; font-style: normal; font-size: 16px;">Nama Lengkap</label> <input id="name" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" required="">
+        </div>
+        <div>
+         <label data-template-id="form-email-label" for="email" class="canva-text block text-sm font-medium text-navy mb-1" style="color: rgb(10, 22, 40); font-weight: 400; font-style: normal; font-size: 16px;">Email</label> <input id="email" type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" required="">
+        </div>
+        <div>
+         <label data-template-id="form-phone-label" for="phone" class="canva-text block text-sm font-medium text-navy mb-1" style="color: rgb(10, 22, 40); font-weight: 400; font-style: normal; font-size: 16px;">Nomor Telepon</label> <input id="phone" type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold">
+        </div>
+        <div>
+         <label data-template-id="form-msg-label" for="message" class="canva-text block text-sm font-medium text-navy mb-1" style="color: rgb(10, 22, 40); font-weight: 400; font-style: normal; font-size: 16px;">Pesan / Deskripsi Kasus</label> <textarea id="message" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold" required=""></textarea>
+        </div><button data-template-id="form-submit" type="submit" class="canva-button w-full py-4 bg-navy text-white font-semibold rounded-lg hover:bg-navy-light transition" style="background: rgb(10, 22, 40); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Kirim Pesan</button>
+        <p id="form-success" class="hidden text-green-600 font-medium text-center">Pesan Anda telah terkirim. Kami akan menghubungi Anda segera.</p>
+       </form>
+       <div class="space-y-6">
+        <div class="flex items-start gap-4">
+         <i data-lucide="map-pin" class="w-6 h-6 text-gold flex-shrink-0 mt-1"></i>
+         <div>
+          <h4 data-template-id="contact-address-label" class="canva-text text-navy font-bold mb-1" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 16px;">Alamat Kantor</h4>
+          <p data-template-id="contact-address" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">Jl. AH Nasution No.105, Cipadung Wet, Kec. Cibiru, Kota Bandung, Jawa Barat 40614</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <i data-lucide="phone" class="w-6 h-6 text-gold flex-shrink-0 mt-1"></i>
+         <div>
+          <h4 data-template-id="contact-phone-label" class="canva-text text-navy font-bold mb-1" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 16px;">Telepon / WhatsApp</h4>
+          <p data-template-id="contact-phone" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">+62 83871570708</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <i data-lucide="mail" class="w-6 h-6 text-gold flex-shrink-0 mt-1"></i>
+         <div>
+          <h4 data-template-id="contact-email-label" class="canva-text text-navy font-bold mb-1" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 16px;">Email</h4>
+          <p data-template-id="contact-email" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">info@yourpartners.co.id</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <i data-lucide="clock" class="w-6 h-6 text-gold flex-shrink-0 mt-1"></i>
+         <div>
+          <h4 data-template-id="contact-hours-label" class="canva-text text-navy font-bold mb-1" style="color: rgb(10, 22, 40); font-weight: 700; font-style: normal; font-size: 16px;">Jam Operasional</h4>
+          <p data-template-id="contact-hours" class="canva-text text-gray-600 text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 17px;">Senin - Jumat: 08.00 - 17.00 WIB | Sabtu: 09.00 - 13.00 WIB</p>
+         </div>
+        </div>
+        <div class="rounded-xl overflow-hidden h-48 bg-gray-200">
+         <iframe title="Google Maps - Jakarta Office Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.24892098498!2d106.6893814!3d-6.2297465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta!5e0!3m2!1sid!2sid!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Footer -->
+    <footer data-template-id="footer-section" class="canva-footer bg-navy py-12" style="background: rgb(10, 22, 40);">
+     <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+       <div>
+        <h3 data-template-id="footer-brand" class="canva-text text-white text-xl font-bold mb-4" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 19px;">Your Partner's</h3>
+        <p data-template-id="footer-desc" class="canva-text text-white/60 text-sm" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Firma hukum profesional yang berdedikasi memberikan solusi hukum terbaik sejak 1999.</p>
+       </div>
+       <div>
+        <h4 data-template-id="footer-nav-title" class="canva-text text-gold font-bold mb-4" style="color: rgb(201, 168, 76); font-weight: 700; font-style: normal; font-size: 16px;">Navigasi</h4>
+        <nav class="space-y-2">
+         <a href="#home" class="block text-white/60 hover:text-gold text-sm transition">Beranda</a> <a href="#home" data-scroll="about" class="block text-white/60 hover:text-gold text-sm transition">Tentang Kami</a> <a href="#home" data-scroll="services" class="block text-white/60 hover:text-gold text-sm transition">Layanan</a> <a href="#home" data-scroll="contact" class="block text-white/60 hover:text-gold text-sm transition">Kontak</a>
+        </nav>
+       </div>
+       <div>
+        <h4 data-template-id="footer-social-title" class="canva-text text-gold font-bold mb-4" style="color: rgb(201, 168, 76); font-weight: 700; font-style: normal; font-size: 16px;">Media Sosial</h4>
+        <div class="flex gap-4">
+         <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition"><i data-lucide="instagram" class="w-5 h-5 text-white"></i></a> <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition"><i data-lucide="linkedin" class="w-5 h-5 text-white"></i></a> <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition"><i data-lucide="facebook" class="w-5 h-5 text-white"></i></a>
+        </div>
+       </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 text-center">
+       <p data-template-id="footer-copy" class="canva-text text-white/40 text-sm" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 13px;">© 1999-2026 Your Partner's. All Rights Reserved.</p>
+      </div>
+     </div>
+    </footer>
+   </div><!-- SERVICE DETAIL VIEW -->
+   <div id="view-service" class="hidden"></div><!-- ARTICLE DETAIL VIEW -->
+   <div id="view-article" class="hidden"></div><!-- PROFILE DETAIL VIEW -->
+   <div id="view-profile" class="hidden"></div>
+  </div><!-- WhatsApp Float --> <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition hover:scale-110">
+   <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+   </svg></a> <button id="back-to-top" class="fixed bottom-6 left-6 z-50 w-12 h-12 bg-navy rounded-full flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-opacity hover:bg-gold" type="button" aria-label="Kembali ke atas"><i data-lucide="chevron-up" class="w-6 h-6 text-white"></i></button>
+  <script src="/_sdk/719055fef2a85d14.editing_sdk.js" integrity="sha512-kFqrdGgIiTOsu307feB5Cy3JVP9IayftsmCIZ0csxYBGuBmJQPhyvcnmKR8F0fTW97h5s1gAvz3SumI8zJ6OxQ=="></script>
+  <script>
+  (function() {
+    const servicesData = [
+      { slug: 'hukum-pidana-perdata', title: 'Hukum Pidana & Perdata', icon: 'shield', imgId: 'service-hero-criminal', desc: 'Firma hukum kami memberikan pendampingan hukum menyeluruh sejak tahap konsultasi awal, penyelidikan, penyidikan, persidangan, hingga upaya hukum lanjutan.', scope: ['Pendampingan perkara pidana','Pendampingan perkara perdata','Penyusunan gugatan dan jawaban','Somasi dan mediasi','Pendampingan di kepolisian, kejaksaan, dan pengadilan','Penyelesaian sengketa melalui litigasi maupun nonlitigasi'], faqs: [{q:'Apakah bisa mendampingi sejak tahap penyidikan?',a:'Ya, kami mendampingi klien sejak tahap penyelidikan hingga upaya hukum lanjutan.'},{q:'Berapa lama proses perkara pidana?',a:'Tergantung kompleksitas kasus, 3-6 bulan untuk kasus sederhana.'},{q:'Apakah konsultasi awal gratis?',a:'Ya, konsultasi awal selama 30 menit tanpa biaya.'}], ctaText: 'Konsultasi Sekarang' },
+      { slug: 'hukum-bisnis-korporasi', title: 'Hukum Bisnis & Korporasi', icon: 'briefcase', imgId: 'service-hero-business', desc: 'Kami menyediakan layanan hukum komprehensif bagi perusahaan, UMKM, startup, dan investor.', scope: ['Pembuatan dan review kontrak','Legal opinion','Due diligence','Perizinan usaha','Pendirian PT, CV, Yayasan','Restrukturisasi perusahaan'], faqs: [{q:'Berapa lama proses pendirian PT?',a:'7-14 hari kerja dengan sistem OSS.'},{q:'Apakah bisa membantu investor asing?',a:'Ya, kami berpengalaman mendampingi investasi asing.'}], ctaText: 'Konsultasi Bisnis' },
+      { slug: 'hukum-keluarga-waris', title: 'Hukum Keluarga & Waris', icon: 'users', imgId: 'service-hero-family', desc: 'Kami menangani permasalahan hukum keluarga dengan pendekatan bijaksana dan empatik.', scope: ['Perceraian','Hak asuh anak','Nafkah','Pembagian harta bersama','Pembagian warisan','Wasiat dan Hibah'], faqs: [{q:'Berapa lama proses perceraian?',a:'Rata-rata 3-6 bulan.'},{q:'Bagaimana hak asuh anak ditentukan?',a:'Pengadilan mempertimbangkan kepentingan terbaik anak.'}], ctaText: 'Konsultasi Hukum Keluarga' },
+      { slug: 'hukum-pertanahan', title: 'Hukum Pertanahan', icon: 'map', imgId: 'service-hero-land', desc: 'Layanan hukum pertanahan menangani berbagai permasalahan terkait hak atas tanah.', scope: ['Sertifikasi tanah','Sengketa kepemilikan','Pembebasan lahan','Peralihan hak'], faqs: [{q:'Berapa lama sertifikasi tanah?',a:'3-12 bulan tergantung kondisi.'}], ctaText: 'Konsultasi Sekarang' },
+      { slug: 'penyelesaian-sengketa', title: 'Penyelesaian Sengketa', icon: 'scale', imgId: 'service-hero-dispute', desc: 'Layanan penyelesaian sengketa menawarkan berbagai mekanisme efektif.', scope: ['Negosiasi','Mediasi','Arbitrase','Litigasi'], faqs: [{q:'Keuntungan APS vs litigasi?',a:'Lebih cepat, biaya rendah, rahasia.'}], ctaText: 'Konsultasi Sekarang' },
+      { slug: 'mediasi', title: 'Mediasi', icon: 'handshake', imgId: 'service-hero-mediation', desc: 'Layanan mediasi membantu para pihak mencapai kesepakatan.', scope: ['Mediasi di pengadilan','Mediasi di luar pengadilan','Penyusunan kesepakatan'], faqs: [{q:'Berapa lama mediasi?',a:'Maksimal 30 hari di pengadilan.'}], ctaText: 'Konsultasi Sekarang' },
+      { slug: 'arbitrase', title: 'Arbitrase', icon: 'landmark', imgId: 'service-hero-arbitration', desc: 'Layanan arbitrase mendampingi klien dalam penyelesaian sengketa.', scope: ['Arbitrase domestik (BANI)','Arbitrase internasional','Eksekusi putusan'], faqs: [{q:'Bisa dibanding?',a:'Tidak, putusan bersifat final dan mengikat.'}], ctaText: 'Konsultasi Sekarang' },
+      { slug: 'legal-opinion', title: 'Legal Opinion', icon: 'file-check', imgId: 'service-hero-legal-opinion', desc: 'Layanan legal opinion menyediakan pendapat hukum profesional.', scope: ['Legal opinion transaksi bisnis','Investasi','Due diligence','IPO'], faqs: [{q:'Berapa lama?',a:'5-14 hari kerja.'}], ctaText: 'Konsultasi Sekarang' },
+      { slug: 'pembuatan-kontrak', title: 'Pembuatan Kontrak', icon: 'pen-tool', imgId: 'service-hero-contract', desc: 'Layanan pembuatan kontrak mencakup penyusunan dan review berbagai perjanjian.', scope: ['Penyusunan kontrak','Review kontrak','Negosiasi klausul'], faqs: [{q:'Berapa lama?',a:'3-5 hari untuk kontrak sederhana.'}], ctaText: 'Konsultasi Sekarang' },
+      { slug: 'pendampingan-litigasi', title: 'Pendampingan Litigasi', icon: 'gavel', imgId: 'service-hero-litigation', desc: 'Representasi hukum yang kuat di pengadilan.', scope: ['Perkara perdata','Perkara pidana','Banding','Kasasi dan PK'], faqs: [{q:'Di pengadilan mana?',a:'Seluruh pengadilan di Indonesia.'}], ctaText: 'Konsultasi Sekarang' },
+      { slug: 'konsultasi-hukum', title: 'Konsultasi Hukum', icon: 'message-square', imgId: 'service-hero-consultation', desc: 'Sesi konsultasi profesional tatap muka maupun online.', scope: ['Tatap muka','Online','Second opinion','Retainer'], faqs: [{q:'Konsultasi pertama gratis?',a:'Ya, 30 menit.'}], ctaText: 'Konsultasi Sekarang' }
+    ];
+
+    const articlesData = [
+      { id: 0, title: 'Memahami Hak Anda dalam Proses Pidana', category: 'Hukum Pidana', date: '15 Juni 2026', author: 'Dr. Yazied Ikhwan', readTime: '8 menit', content: '<p>Setiap warga negara memiliki hak-hak fundamental yang dilindungi oleh hukum dalam proses peradilan pidana.</p><h3>Hak Tersangka dan Terdakwa</h3><p>Berdasarkan KUHAP, setiap tersangka memiliki hak untuk didampingi penasihat hukum.</p>' },
+      { id: 1, title: 'Panduan Pembuatan Kontrak Bisnis', category: 'Hukum Bisnis', date: '10 Juni 2026', author: 'Salman Nawawi, S.H.', readTime: '10 menit', content: '<p>Kontrak bisnis yang baik adalah fondasi dari hubungan bisnis yang sehat.</p><h3>Syarat Sah Perjanjian</h3><p>Pasal 1320 KUH Perdata mengatur empat syarat sah perjanjian.</p>' },
+      { id: 2, title: 'Mediasi: Alternatif Penyelesaian Sengketa', category: 'Penyelesaian Sengketa', date: '5 Juni 2026', author: 'Muthia Koerunnisa, S.H.', readTime: '7 menit', content: '<p>Mediasi menawarkan solusi yang lebih efisien dan hemat biaya.</p>' }
+    ];
+
+    const teamProfiles = [
+      { id: 1, name: 'Dr. Yazied Ikhwan bin Setu, S.H., M.H.', role: 'Managing Partner', nia: '1253060123', photo: 'team-img-1', summary: 'Dr. Yazied Ikhwan adalah pendiri dan Managing Partner Your Partner\'s Legal Counsel. Dengan pengalaman lebih dari 20 tahun di bidang hukum pidana dan bisnis.', education: ['S3 Ilmu Hukum — Universitas Indonesia (2015)','S2 Hukum Pidana — Universitas Indonesia (2008)','S1 Ilmu Hukum — Universitas Indonesia (2003)'], experience: ['Managing Partner, Your Partner\'s Legal Counsel (2010–Sekarang)','Senior Associate, Hadiputranto Hadinoto & Partners (2006–2010)','Associate, Lubis Ganie Surowidjojo (2003–2006)'], expertise: ['Hukum Pidana','Hukum Bisnis','Tindak Pidana Korupsi','White Collar Crime','Litigasi Komersial'], cases: ['Pendampingan kasus korupsi skala nasional — klien dibebaskan dari seluruh dakwaan','Penanganan sengketa bisnis antar pemegang saham perusahaan multinasional senilai USD 25 juta','Pembelaan tersangka dalam kasus pencucian uang lintas negara'], achievements: ['Doktor Hukum Lulusan Terbaik UI','Advokat Terbaik PERADI 2019','Anggota International Bar Association','Pembicara di ASEAN Law Conference 2022','Sertifikasi Mediator Bersertifikat MA RI'], timeline: [{year:'2003',event:'Lulus S1 Hukum UI — Cum Laude'},{year:'2006',event:'Bergabung dengan HHP sebagai Senior Associate'},{year:'2008',event:'Meraih gelar S2 Hukum Pidana'},{year:'2010',event:'Mendirikan Your Partner\'s Legal Counsel'},{year:'2015',event:'Meraih gelar Doktor Ilmu Hukum'},{year:'2019',event:'Penghargaan Advokat Terbaik PERADI'}], stats: { cases: 350, successRate: 97, yearsExp: 20 } },
+      { id: 2, name: 'Salsa Bila Agustin Putri, S.H., LL.M.', role: 'Senior Partner', nia: '1253060056', photo: 'team-img-2', summary: 'Salsa Bila Agustin Putri adalah Senior Partner yang memimpin divisi Hukum Keluarga & Perdata.', education: ['LL.M. Family Law — University of Melbourne (2012)','S1 Ilmu Hukum — Universitas Gadjah Mada (2009)'], experience: ['Senior Partner, Your Partner\'s Legal Counsel (2015–Sekarang)','Associate, Ali Budiardjo Nugroho Reksodiputro (2012–2015)','Junior Associate, ABNR (2009–2012)'], expertise: ['Hukum Keluarga','Hukum Perdata','Perceraian','Hak Asuh Anak','Pembagian Harta Gono-Gini'], cases: ['Penanganan perceraian high-profile dengan pembagian aset senilai Rp 200 Miliar','Advokasi hak asuh anak dalam kasus perkawinan campuran lintas negara','Mediasi pembagian warisan keluarga konglomerat dengan 12 ahli waris'], achievements: ['Alumni Terbaik FH UGM 2009','Anggota IKAHI','Sertifikasi Mediator MA RI','Kontributor Jurnal Hukum Keluarga Indonesia','Pembicara di Family Law Asia Forum 2023'], timeline: [{year:'2009',event:'Lulus S1 Hukum UGM'},{year:'2012',event:'LL.M. University of Melbourne'},{year:'2015',event:'Bergabung Your Partner\'s sebagai Partner'},{year:'2020',event:'Memimpin Divisi Hukum Keluarga'},{year:'2023',event:'Pembicara Family Law Asia Forum'}], stats: { cases: 280, successRate: 95, yearsExp: 15 } },
+      { id: 3, name: 'Mochammad Farizki, S.H., M.Kn.', role: 'Partner', nia: '1253060058', photo: 'team-img-3', summary: 'Mochammad Farizki adalah Partner yang mengepalai divisi Hukum Pertanahan & Waris.', education: ['S2 Kenotariatan — Universitas Airlangga (2014)','S1 Ilmu Hukum — Universitas Airlangga (2012)'], experience: ['Partner, Your Partner\'s Legal Counsel (2018–Sekarang)','Notaris & PPAT Praktik Mandiri (2015–2018)','Associate, Kantor Hukum Soemadipradja & Taher (2012–2015)'], expertise: ['Hukum Pertanahan','Hukum Waris','Kenotariatan','Sertifikasi Tanah','Sengketa Properti'], cases: ['Penyelesaian sengketa tanah seluas 500 hektar antara korporasi dan masyarakat adat','Pembuatan dan eksekusi wasiat untuk keluarga dengan aset properti di 5 negara','Pendampingan sertifikasi tanah massal untuk pengembang perumahan skala besar'], achievements: ['Notaris & PPAT Bersertifikat','Anggota Ikatan Notaris Indonesia','Dosen Tamu FH UNAIR','Kontributor Buku Hukum Agraria Modern','Best Young Lawyer Award 2020'], timeline: [{year:'2012',event:'Lulus S1 Hukum UNAIR'},{year:'2014',event:'S2 Kenotariatan UNAIR'},{year:'2015',event:'Praktik Notaris & PPAT'},{year:'2018',event:'Bergabung sebagai Partner'},{year:'2020',event:'Best Young Lawyer Award'}], stats: { cases: 220, successRate: 94, yearsExp: 12 } },
+      { id: 4, name: 'Niki Putri, S.H., LL.M.', role: 'Senior Partner', nia: '1253060023', photo: 'team-img-4', summary: 'Niki Putri adalah Senior Partner yang memimpin divisi Hukum Korporasi & M&A.', education: ['LL.M. Corporate Law — National University of Singapore (2010)','S1 Ilmu Hukum — Universitas Indonesia (2006)'], experience: ['Senior Partner, Your Partner\'s Legal Counsel (2014–Sekarang)','Senior Associate, Assegaf Hamzah & Partners (2010–2014)','Associate, Mochtar Karuwin Komar (2006–2010)'], expertise: ['Hukum Korporasi','Merger & Akuisisi','Pasar Modal','Investasi Asing','Restrukturisasi'], cases: ['Pendampingan merger dua bank swasta dengan total aset gabungan Rp 80 Triliun','Transaksi akuisisi perusahaan teknologi senilai USD 150 juta','Restrukturisasi utang korporasi multinasional senilai USD 500 juta'], achievements: ['Top 40 Under 40 Lawyers Indonesia (2018)','Anggota Indonesian Corporate Counsel Association','Pembicara di M&A Forum Asia Pacific','Sertifikasi Capital Market Legal Consultant','Alumni NUS Dean\'s List'], timeline: [{year:'2006',event:'Lulus S1 Hukum UI'},{year:'2010',event:'LL.M. NUS Singapore'},{year:'2014',event:'Bergabung sebagai Senior Partner'},{year:'2018',event:'Top 40 Under 40 Lawyers'},{year:'2022',event:'Memimpin Divisi M&A'}], stats: { cases: 190, successRate: 96, yearsExp: 18 } },
+      { id: 5, name: 'Salman Nawawi, S.H., M.H', role: 'Partner', nia: '1253060051', photo: 'team-img-5', summary: 'Salman Nawawi adalah Partner yang mengepalai divisi Hukum Kontrak & Komersial.', education: ['S2 Hukum Bisnis — Universitas Brawijaya (2014)','S1 Ilmu Hukum — Universitas Brawijaya (2010)'], experience: ['Partner, Your Partner\'s Legal Counsel (2018–Sekarang)','Senior Associate, Makarim & Taira S. (2014–2018)','Associate, Makes & Partners (2010–2014)'], expertise: ['Hukum Kontrak','Hukum Komersial','Franchise','Joint Venture','Dispute Resolution'], cases: ['Penyusunan kontrak joint venture senilai Rp 2 Triliun','Penyelesaian sengketa franchise restoran cepat saji dengan 200+ outlet','Review kontrak EPC untuk proyek infrastruktur senilai USD 1 Miliar'], achievements: ['Anggota PERADI','Kontributor Hukum Online.com','Pembicara di Indonesia Contract Law Summit','Sertifikasi Arbitrator BANI','Best Legal Advisor Award 2021'], timeline: [{year:'2010',event:'Lulus S1 Hukum UB'},{year:'2014',event:'S2 Hukum Bisnis UB'},{year:'2018',event:'Bergabung sebagai Partner'},{year:'2021',event:'Best Legal Advisor Award'}], stats: { cases: 250, successRate: 93, yearsExp: 14 } },
+      { id: 6, name: 'Luki Rahmat Hidayat, S.H., LL.M.', role: 'Associate', nia: '1253060047', photo: 'team-img-6', summary: 'Luki Rahmat Hidayat adalah Associate yang berfokus pada Hukum Investasi & IPO.', education: ['LL.M. Securities Law — Universitas Indonesia (2020)','S1 Ilmu Hukum — Universitas Tarumanagara (2017)'], experience: ['Associate, Your Partner\'s Legal Counsel (2020–Sekarang)','Junior Associate, Hiswara Bunjamin & Tandjung (2017–2020)'], expertise: ['Hukum Investasi','IPO & Pasar Modal','Securities Regulation','Venture Capital','Fintech Regulation'], cases: ['Pendampingan IPO perusahaan teknologi dengan kapitalisasi pasar Rp 15 Triliun','Advisory untuk platform fintech dalam pengurusan lisensi OJK','Pendampingan investasi seri B startup unicorn senilai USD 200 juta'], achievements: ['Rising Star Lawyer 2023','Anggota Himpunan Konsultan Hukum Pasar Modal','Kontributor Jurnal Pasar Modal Indonesia','Sertifikasi WPPE','Lulus Cum Laude UNTAR'], timeline: [{year:'2017',event:'Lulus S1 Hukum UNTAR — Cum Laude'},{year:'2020',event:'LL.M. UI & Bergabung Your Partner\'s'},{year:'2023',event:'Rising Star Lawyer Award'}], stats: { cases: 85, successRate: 92, yearsExp: 7 } },
+      { id: 7, name: 'Sadam Malik Akbar, S.H., M.H', role: 'Associate', nia: '1253060049', photo: 'team-img-7', summary: 'Sadam Malik Akbar adalah Associate yang berfokus pada Hukum Pidana & Forensik Digital.', education: ['S2 Hukum Pidana — Universitas Hasanuddin (2021)','S1 Ilmu Hukum — Universitas Hasanuddin (2018)'], experience: ['Associate, Your Partner\'s Legal Counsel (2021–Sekarang)','Magang, LBH Jakarta (2018–2019)','Research Assistant, FH UNHAS (2019–2021)'], expertise: ['Hukum Pidana','Cybercrime','Forensik Digital','Perlindungan Data Pribadi','Hukum Teknologi'], cases: ['Pembelaan dalam kasus cybercrime lintas negara melibatkan 3 yurisdiksi','Pendampingan korporasi dalam kasus kebocoran data 2 juta pengguna','Advokasi korban penipuan online dengan kerugian total Rp 50 Miliar'], achievements: ['Anggota PERADI','Sertifikasi Digital Forensics','Kontributor Jurnal Hukum UNHAS','Pembicara di Cyber Law Indonesia Conference 2024','Lulus Cum Laude UNHAS'], timeline: [{year:'2018',event:'Lulus S1 Hukum UNHAS — Cum Laude'},{year:'2021',event:'S2 Hukum Pidana & Bergabung Your Partner\'s'},{year:'2024',event:'Pembicara Cyber Law Conference'}], stats: { cases: 65, successRate: 91, yearsExp: 6 } }
+    ];
+
+    let currentView = 'home';
+    let pendingScroll = null;
+
+    function navigateTo(hash) { renderView(hash); window.scrollTo(0, 0); }
+
+    function renderView(hash) {
+      const homeView = document.getElementById('view-home');
+      const serviceView = document.getElementById('view-service');
+      const articleView = document.getElementById('view-article');
+      const profileView = document.getElementById('view-profile');
+      homeView.classList.add('hidden');
+      serviceView.classList.add('hidden');
+      articleView.classList.add('hidden');
+      profileView.classList.add('hidden');
+
+      if (hash.startsWith('#service/')) {
+        const slug = hash.replace('#service/', '');
+        renderServicePage(slug);
+        serviceView.classList.remove('hidden');
+        serviceView.classList.add('view-transition');
+        setTimeout(() => serviceView.classList.remove('view-transition'), 500);
+        currentView = 'service';
+      } else if (hash.startsWith('#article/')) {
+        const id = parseInt(hash.replace('#article/', ''));
+        renderArticlePage(id);
+        articleView.classList.remove('hidden');
+        articleView.classList.add('view-transition');
+        setTimeout(() => articleView.classList.remove('view-transition'), 500);
+        currentView = 'article';
+      } else if (hash.startsWith('#profile/')) {
+        const id = parseInt(hash.replace('#profile/', ''));
+        renderProfilePage(id);
+        profileView.classList.remove('hidden');
+        profileView.classList.add('view-transition');
+        setTimeout(() => profileView.classList.remove('view-transition'), 500);
+        currentView = 'profile';
+      } else {
+        homeView.classList.remove('hidden');
+        currentView = 'home';
+        if (pendingScroll) {
+          setTimeout(() => { const el = document.getElementById(pendingScroll); if (el) el.scrollIntoView({ behavior: 'smooth' }); pendingScroll = null; }, 100);
+        }
+      }
+      lucide.createIcons();
+      initFaqButtons();
+    }
+
+    function renderProfilePage(id) {
+      const member = teamProfiles.find(m => m.id === id);
+      if (!member) return;
+      const teamImgEl = document.querySelector('[data-template-id="' + member.photo + '"]');
+      const imgSrc = teamImgEl ? teamImgEl.src : '';
+
+      document.getElementById('view-profile').innerHTML = '<div class="relative"><div class="h-60 md:h-96 bg-navy relative overflow-hidden"><div class="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy"></div><img src="' + imgSrc + '" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="' + member.name + '"></div><div class="max-w-5xl mx-auto px-6 -mt-24 md:-mt-32 relative z-10"><div class="flex flex-col sm:flex-row gap-6 md:gap-8 items-start sm:items-end mb-8"><img src="' + imgSrc + '" class="w-36 h-36 md:w-56 md:h-56 rounded-2xl object-cover shadow-2xl border-4 border-white" alt="' + member.name + '"><div class="pb-2"><h1 class="text-navy text-xl md:text-4xl font-bold mb-2">' + member.name + '</h1><p class="text-gold text-base md:text-lg font-semibold">' + member.role + ' — NIA: ' + member.nia + '</p></div></div></div></div><main class="max-w-5xl mx-auto px-6 py-10 md:py-12"><section class="mb-10 md:mb-12"><h2 class="text-navy text-lg md:text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="user" class="w-5 h-5 text-gold"></i> Profil Profesional</h2><p class="text-gray-700 leading-relaxed text-base md:text-lg">' + member.summary + '</p></section><section class="mb-10 md:mb-12 bg-gray-50 rounded-2xl p-6 md:p-8"><div class="grid grid-cols-3 gap-4 md:gap-6 text-center"><div><div class="profile-stat-ring mx-auto mb-2"><span class="text-xl md:text-2xl font-bold text-navy">' + member.stats.cases + '</span></div><p class="text-gray-600 text-xs md:text-sm font-medium">Perkara</p></div><div><div class="profile-stat-ring mx-auto mb-2"><span class="text-xl md:text-2xl font-bold text-navy">' + member.stats.successRate + '%</span></div><p class="text-gray-600 text-xs md:text-sm font-medium">Keberhasilan</p></div><div><div class="profile-stat-ring mx-auto mb-2"><span class="text-xl md:text-2xl font-bold text-navy">' + member.stats.yearsExp + '</span></div><p class="text-gray-600 text-xs md:text-sm font-medium">Tahun</p></div></div></section><div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-10 md:mb-12"><section><h2 class="text-navy text-lg md:text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="graduation-cap" class="w-5 h-5 text-gold"></i> Pendidikan</h2><ul class="space-y-3">' + member.education.map(function(e){return '<li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-4 h-4 text-gold flex-shrink-0 mt-1"></i><span class="text-gray-700 text-sm">' + e + '</span></li>';}).join('') + '</ul></section><section><h2 class="text-navy text-lg md:text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="briefcase" class="w-5 h-5 text-gold"></i> Pengalaman</h2><ul class="space-y-3">' + member.experience.map(function(e){return '<li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-4 h-4 text-gold flex-shrink-0 mt-1"></i><span class="text-gray-700 text-sm">' + e + '</span></li>';}).join('') + '</ul></section></div><section class="mb-10 md:mb-12"><h2 class="text-navy text-lg md:text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-gold"></i> Keahlian</h2><div class="flex flex-wrap gap-2 md:gap-3">' + member.expertise.map(function(e){return '<span class="px-3 py-1.5 md:px-4 md:py-2 bg-navy/5 border border-navy/20 rounded-full text-navy text-xs md:text-sm font-medium">' + e + '</span>';}).join('') + '</div></section><section class="mb-10 md:mb-12"><h2 class="text-navy text-lg md:text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="file-text" class="w-5 h-5 text-gold"></i> Pengalaman Perkara</h2><div class="space-y-3 md:space-y-4">' + member.cases.map(function(c){return '<div class="bg-gray-50 rounded-lg p-4 md:p-5 border-l-4 border-gold"><p class="text-gray-700 text-sm">' + c + '</p></div>';}).join('') + '</div></section><section class="mb-10 md:mb-12"><h2 class="text-navy text-lg md:text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="trophy" class="w-5 h-5 text-gold"></i> Prestasi</h2><ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">' + member.achievements.map(function(a){return '<li class="flex items-start gap-3 bg-gray-50 rounded-lg p-3 md:p-4"><i data-lucide="star" class="w-4 h-4 text-gold flex-shrink-0 mt-0.5"></i><span class="text-gray-700 text-xs md:text-sm">' + a + '</span></li>';}).join('') + '</ul></section><section class="mb-10 md:mb-12"><h2 class="text-navy text-lg md:text-xl font-bold mb-6 flex items-center gap-2"><i data-lucide="clock" class="w-5 h-5 text-gold"></i> Karier</h2><div class="ml-2">' + member.timeline.map(function(t){return '<div class="timeline-item pb-4"><span class="text-gold font-bold text-sm">' + t.year + '</span><p class="text-gray-700 mt-1 text-sm">' + t.event + '</p></div>';}).join('') + '</div></section><div class="flex flex-col sm:flex-row gap-4 justify-center pt-4 border-t border-gray-200"><a href="#home" data-scroll="team" class="px-6 md:px-8 py-3 md:py-4 border-2 border-navy text-navy rounded-lg hover:bg-navy hover:text-white transition font-semibold flex items-center justify-center gap-2 text-sm"><i data-lucide="arrow-left" class="w-4 h-4"></i> Kembali ke Tim</a><a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="px-6 md:px-8 py-3 md:py-4 bg-gold text-navy rounded-lg hover:bg-gold-light transition font-semibold flex items-center justify-center gap-2 text-sm"><i data-lucide="message-circle" class="w-4 h-4"></i> Hubungi Advokat</a></div></main><footer class="bg-navy py-8 text-center"><p class="text-white/40 text-sm">\u00a9 2026 Your Partner\u2019s. All Rights Reserved.</p></footer>';
+    }
+
+    function renderServicePage(slug) {
+      const svc = servicesData.find(function(s){return s.slug === slug;});
+      if (!svc) return;
+      const imgEl = document.getElementById(svc.imgId);
+      const bgImage = imgEl ? "url('" + imgEl.src + "')" : '';
+      document.getElementById('view-service').innerHTML = '<div class="service-hero" style="background-image:' + bgImage + ';background-size:cover;background-position:center;"><div class="absolute inset-0 bg-navy/80"></div><div class="relative z-10 text-center px-6 pt-28 md:pt-32 pb-12 md:pb-16"><h1 class="text-white text-2xl md:text-5xl font-bold mb-4">' + svc.title + '</h1><nav class="text-white/60 text-sm"><a href="#home" class="hover:text-gold">Beranda</a> <span class="mx-2">\u203a</span> <span class="text-gold">' + svc.title + '</span></nav></div></div><main class="max-w-4xl mx-auto px-6 py-12 md:py-16"><p class="text-gray-700 text-base md:text-lg leading-relaxed mb-8 md:mb-10">' + svc.desc + '</p><h2 class="text-navy text-xl md:text-2xl font-bold mb-6">Ruang Lingkup Layanan</h2><ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10 md:mb-12">' + svc.scope.map(function(s){return '<li class="flex items-start gap-3 bg-gray-50 rounded-lg p-4"><i data-lucide="check-circle" class="w-5 h-5 text-gold flex-shrink-0 mt-0.5"></i><span class="text-gray-700 text-sm">' + s + '</span></li>';}).join('') + '</ul><h2 class="text-navy text-xl md:text-2xl font-bold mb-6">Pertanyaan Umum</h2><div class="space-y-3 mb-10 md:mb-12">' + svc.faqs.map(function(f){return '<div class="bg-gray-50 rounded-lg"><button class="faq-btn w-full text-left px-5 py-4 flex justify-between items-center font-semibold text-navy text-sm" type="button"><span>' + f.q + '</span><i data-lucide="chevron-down" class="w-4 h-4 transition-transform"></i></button><div class="faq-content px-5 pb-4"><p class="text-gray-600 text-sm">' + f.a + '</p></div></div>';}).join('') + '</div><div class="bg-navy rounded-xl p-6 md:p-8 text-center mb-8 md:mb-10"><h3 class="text-white text-lg md:text-xl font-bold mb-3">Butuh Bantuan Hukum?</h3><p class="text-white/70 mb-6 text-sm">Konsultasikan masalah hukum Anda dengan tim advokat kami.</p><a href="#home" data-scroll="contact" class="px-6 py-3 bg-gold text-navy font-semibold rounded hover:bg-gold-light transition text-sm">' + svc.ctaText + '</a></div><div class="flex justify-center"><a href="#home" data-scroll="services" class="px-6 py-3 border-2 border-navy text-navy rounded hover:bg-navy hover:text-white transition text-sm font-semibold flex items-center gap-2"><i data-lucide="arrow-left" class="w-4 h-4"></i> Kembali ke Layanan</a></div></main><footer class="bg-navy py-8 text-center"><p class="text-white/40 text-sm">\u00a9 2026 Your Partner\u2019s. All Rights Reserved.</p></footer>';
+    }
+
+    function renderArticlePage(id) {
+      const art = articlesData.find(function(a){return a.id === id;});
+      if (!art) return;
+      const related = articlesData.filter(function(a){return a.id !== id;}).slice(0,2);
+      // Get article image src from the hidden img elements
+      const articleImgEl = document.querySelector('[data-template-id="article-img-' + (id + 1) + '"]');
+      const artImgSrc = articleImgEl ? articleImgEl.src : '';
+
+      document.getElementById('view-article').innerHTML = '<div class="pt-24 md:pt-28 pb-8 bg-gray-50"><div class="max-w-4xl mx-auto px-6"><nav class="text-gray-500 text-sm mb-6"><a href="#home" class="hover:text-gold">Beranda</a> <span class="mx-2">\u203a</span> <span class="text-navy">' + art.title + '</span></nav><h1 class="text-navy text-2xl md:text-4xl font-bold mb-4">' + art.title + '</h1><div class="flex flex-wrap gap-3 md:gap-4 text-sm text-gray-500 mb-6"><span class="flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> ' + art.date + '</span><span class="flex items-center gap-1"><i data-lucide="user" class="w-4 h-4"></i> ' + art.author + '</span><span class="px-2 py-0.5 bg-gold/20 text-gold rounded text-xs font-semibold">' + art.category + '</span></div><img src="' + artImgSrc + '" class="w-full h-48 md:h-96 object-cover rounded-xl mb-8" alt="' + art.title + '"></div></div><main class="max-w-4xl mx-auto px-6 py-8 md:py-10"><article class="prose prose-lg max-w-none text-gray-700 leading-relaxed mb-10">' + art.content + '</article><h3 class="text-navy text-xl font-bold mb-4">Artikel Terkait</h3><div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">' + related.map(function(r){var rImgEl = document.querySelector('[data-template-id="article-img-' + (r.id + 1) + '"]'); var rSrc = rImgEl ? rImgEl.src : ''; return '<a href="#article/' + r.id + '" class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition flex gap-4"><img src="' + rSrc + '" class="w-20 h-20 object-cover rounded" alt="' + r.title + '"><div><h4 class="text-navy font-bold text-sm mb-1">' + r.title + '</h4><span class="text-gray-500 text-xs">' + r.date + '</span></div></a>';}).join('') + '</div><div class="flex justify-center"><a href="#home" data-scroll="articles" class="px-5 py-2 border border-navy text-navy rounded hover:bg-navy hover:text-white transition text-sm">Kembali ke Artikel</a></div></main><footer class="bg-navy py-8 text-center"><p class="text-white/40 text-sm">\u00a9 2026 Your Partner\u2019s. All Rights Reserved.</p></footer>';
+    }
+
+    function initFaqButtons() {
+      document.querySelectorAll('.faq-btn').forEach(function(btn) { btn.replaceWith(btn.cloneNode(true)); });
+      document.querySelectorAll('.faq-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var content = btn.nextElementSibling;
+          var icon = btn.querySelector('[data-lucide]');
+          content.classList.toggle('open');
+          if (icon) icon.style.transform = content.classList.contains('open') ? 'rotate(180deg)' : '';
+        });
+      });
+    }
+
+    // Services grid
+    var grid = document.getElementById('services-grid');
+    servicesData.forEach(function(s) {
+      var card = document.createElement('div');
+      card.className = 'bg-white/10 backdrop-blur rounded-xl p-6 hover:bg-white/20 transition cursor-pointer group';
+      card.innerHTML = '<h3 class="text-white font-bold mb-2">' + s.title + '</h3><p class="text-white/60 text-sm mb-3">Layanan profesional di bidang ' + s.title.toLowerCase() + '.</p><span class="text-gold text-sm font-semibold group-hover:underline">Pelajari Selengkapnya \u2192</span>';
+      card.addEventListener('click', function() { location.hash = '#service/' + s.slug; });
+      grid.appendChild(card);
+    });
+
+    // Hash routing
+    function handleHash() { navigateTo(location.hash || '#home'); }
+    window.addEventListener('hashchange', handleHash);
+
+    // data-scroll links
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('[data-scroll]');
+      if (link) {
+        e.preventDefault();
+        var section = link.getAttribute('data-scroll');
+        if (currentView === 'home') {
+          var el = document.getElementById(section);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          pendingScroll = section;
+          location.hash = '#home';
+        }
+        document.getElementById('mobile-menu').classList.add('hidden');
+      }
+    });
+
+    window.addEventListener('scroll', function() {
+      var btt = document.getElementById('back-to-top');
+      btt.style.opacity = window.scrollY > 400 ? '1' : '0';
+      btt.style.pointerEvents = window.scrollY > 400 ? 'auto' : 'none';
+    });
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() { document.getElementById('mobile-menu').classList.toggle('hidden'); });
+    document.getElementById('back-to-top').addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('form-success').classList.remove('hidden');
+      e.target.reset();
+      setTimeout(function() { document.getElementById('form-success').classList.add('hidden'); }, 5000);
+    });
+
+    lucide.createIcons();
+    initFaqButtons();
+    handleHash();
+  })();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a185933483e8afe4',t:'MTc4MzU4MTcyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body></html>
