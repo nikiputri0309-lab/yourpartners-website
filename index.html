@@ -28,6 +28,10 @@
     .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
     .faq-content.open { max-height: 500px; }
     .hero-section { min-height: calc(100 * min(var(--vh, 1vh), 1vh)); }
+    @media (max-width: 480px) {
+  [data-template-id="hero-title"] { font-size: 30px !important; }
+  [data-template-id="hero-subtitle"] { font-size: 15px !important; }
+}
     .service-hero { min-height: 50vh; position: relative; display: flex; align-items: center; justify-content: center; }
     .view-transition { animation: fadeSlideIn 0.5s ease forwards; }
     @keyframes fadeSlideIn {
